@@ -10,8 +10,6 @@ const notFound = require('./error-handlers/404.js');
 
 app.use(express.json());
 app.use(logger);
-app.use(validator);
-
 
 
 function start(port) {
@@ -20,11 +18,15 @@ function start(port) {
   });
 }
 
-app.get('/person', (req, res) => {
-  const person = { name: req.query.name }
-  res.status(200).json(person);
+app.get('/person', validator, (req, res) => {
+  const person = { name: req.query.name };
+  res.json(person);
   console.log(person);
 })
+
+app.get('/bad-route', (req, res) => {
+  throw new Error('you have been tricked, it was an error all along.');
+});
 
 app.use('*', notFound);
 app.use(errors);
