@@ -19,9 +19,8 @@ function start(port) {
 }
 
 app.get('/person', validator, (req, res) => {
-  const person = { name: req.query.name };
-  res.json(person);
-  console.log(person);
+  let name = rea.query.name;
+  res.status(200).json({ name });
 })
 
 app.get('/bad-route', (req, res) => {
