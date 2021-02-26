@@ -1,10 +1,13 @@
 'use strict';
 
+
 const validator = (req, res, next) => {
-  if (!req.query.name) {
-    throw new Error('no name in query string');
-  } 
-  next();
+  let name = req.query.name;
+  if (!name) {
+    next('name not provided') // error handling middleware
+  } else {
+    next(); // validator checked out, move to the next middleware in the chain (route)
+  }
 }
 
 module.exports = validator;
