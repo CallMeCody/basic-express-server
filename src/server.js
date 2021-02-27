@@ -19,7 +19,7 @@ function start(port) {
 }
 
 app.get('/person', validator, (req, res) => {
-  let name = rea.query.name;
+  let name = req.query.name;
   res.status(200).json({ name });
 })
 
