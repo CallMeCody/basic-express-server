@@ -7,8 +7,8 @@
 ### Links and Resources
 
 - [ci/cd](https://github.com/CallMeCody/basic-express-server/actions) (GitHub Actions)
-- [HEROKU APP](https://basic-express-server-lab-02.herokuapp.com/)
-- [Pull Request](https://github.com/CallMeCody/basic-express-server/pull/8)
+- [HEROKU APP](https://basic-api-server-lab-03.herokuapp.com)
+- [Pull Request](https://github.com/CallMeCody/basic-api-server/pull/3)
 
 ### Setup
 
@@ -28,10 +28,7 @@
 
 - 404 on a bad route
 - 404 on a bad method
-- 500 if no name in the query string
-- 200 if the name is in the query string
-- if a name is in the query string, then the output object is correct
 
 #### UML
 
-![UML Example](uml.jpg)
+![UML]()
